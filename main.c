@@ -1,30 +1,30 @@
 #include <stdio.h>
 
-int count_digits(char *itsString)
+int znak_count(char *stng)
 {
-  int i, j, dig=0;
+  int i, j, znk=0;
 
   for (i=0; i<10; i++)
   {
   for (j = 48; j < 58; j++)
-    if (itsString[i]==j)
-      {dig++;}
+    if (stng[i]==j)
+      {znk++;}
 
   }
   
-return dig;
+return znk;
 }
 
 int main()
 {
 
-  char itsString[10];
+  char stng[10];
 
-  printf( "Input string: " );
+  printf( "Vvedite stroku: " );
 
-  fgets( itsString, 10, stdin );
+  fgets( stng, 10, stdin );
   
-  printf("dig count:%d", count_digits(itsString));
+  printf("simvolov:%d", znak_count(stng));
 
 return 0;
 }
